@@ -29,7 +29,7 @@ src
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/-/saucedemo-purchase-flow-tests.git
+   git clone https://github.com/vACKONERep/saucedemo-purchase-flow-tests.git
 2. Navigate to the project directory:
    cd saucedemo-purchase-flow-tests
 3. Build the project using Gradle:
