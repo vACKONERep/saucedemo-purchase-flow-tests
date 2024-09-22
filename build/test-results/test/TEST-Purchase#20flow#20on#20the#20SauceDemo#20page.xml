@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Purchase flow on the SauceDemo page" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-22T23:09:41" hostname="DESKTOP-T5US099" time="12.97">
+  <properties/>
+  <testcase name="Successful login and purchase" classname="Purchase flow on the SauceDemo page" time="12.97"/>
+  <system-out><![CDATA[
+@happyPath
+Scenario: Successful login and purchase                 ?[90m# src/test/resources/features/PurchaseFlow.feature:3?[0m
+  ?[32mGiven ?[0m?[32mI am on the login page?[0m                          ?[90m# glue.purchase_steps.iAmOnTheLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mI log in with ?[0m?[32m?[1m"standard_user"?[0m?[32m and ?[0m?[32m?[1m"secret_sauce"?[0m ?[90m# glue.purchase_steps.iLogInWithAnd(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should be on the products page?[0m                 ?[90m# glue.purchase_steps.iShouldBeOnTheProductsPage()?[0m
+  ?[32mWhen ?[0m?[32mI add two products to the cart?[0m                   ?[90m# glue.purchase_steps.iAddTwoProductsToTheCart()?[0m
+  ?[32mWhen ?[0m?[32mI view the cart?[0m                                  ?[90m# glue.purchase_steps.iViewTheCart()?[0m
+  ?[32mWhen ?[0m?[32mI proceed to checkout?[0m                            ?[90m# glue.purchase_steps.iProceedToCheckout()?[0m
+Filling out checkout form:
+First Name: John
+Last Name: Doe
+Postal Code: 12345
+  ?[32mWhen ?[0m?[32mI fill out the checkout form with:?[0m               ?[90m# glue.purchase_steps.iFillOutTheCheckoutFormWith(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName | postalCode |
+    | John      | Doe      | 12345      |
+  ?[32mThen ?[0m?[32mI finish the purchase?[0m                            ?[90m# glue.purchase_steps.iFinishThePurchase()?[0m
+]]></system-out>
+  <system-err><![CDATA[Starting Microsoft Edge WebDriver 129.0.2792.52 (6462e8fc16ec8b62bef06801adff3cbeccd6a7d4) on port 23490
+To submit feedback, report a bug, or suggest new features, please visit https://github.com/MicrosoftEdge/EdgeWebDriver
+
+Only local connections are allowed.
+Please see https://aka.ms/WebDriverSecurity for suggestions on keeping Microsoft Edge WebDriver safe.
+
+Microsoft Edge WebDriver was started successfully.
+msedgedriver was started successfully on port 23490.
+Sep 22, 2024 6:09:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 129
+Sep 22, 2024 6:09:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.8.3` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
