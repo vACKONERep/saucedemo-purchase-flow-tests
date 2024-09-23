@@ -31,7 +31,7 @@ src
    ```bash
    git clone https://github.com/vACKONERep/saucedemo-purchase-flow-tests.git
 2. Navigate to the project directory:
-   cd saucedemo-purchase-flow-tests
+   cd src/test/java/runners/PurchaseFlowTest.java
 3. Build the project using Gradle:
    ./gradlew build
 4. Navifate to the report html file:
