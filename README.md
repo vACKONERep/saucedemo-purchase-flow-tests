@@ -34,4 +34,6 @@ src
    cd saucedemo-purchase-flow-tests
 3. Build the project using Gradle:
    ./gradlew build
+4. Navifate to the report html file:
+    cd build/reports/cucumber-reports.html
 
