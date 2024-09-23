@@ -53,19 +53,9 @@ public class purchase_steps{
         OnStage.theActorInTheSpotlight().attemptsTo(Click.on(ProductsPageInterface.BTN_CHECKOUT),WaitUntil.the(PurchasePageInterface.INP_FIRST_NAME, WebElementStateMatchers.isVisible()));
     }
 
-    @When("I fill out the checkout form with:")
-    public void iFillOutTheCheckoutFormWith(DataTable dataTable) {
-        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-
-        String firstName = data.get(0).get("firstName");
-        String lastName = data.get(0).get("lastName");
-        String postalCode = data.get(0).get("postalCode");
-        // Logging the extracted values
-        System.out.println("Filling out checkout form:");
-        System.out.println("First Name: " + firstName);
-        System.out.println("Last Name: " + lastName);
-        System.out.println("Postal Code: " + postalCode);
-        // Wait for the input fields to be visible and fill them out
+    @When("I fill out the checkout form with {string}, {string}, and {string}")
+    public void iFillOutTheCheckoutFormWith(String firstName, String lastName, String postalCode) {
+        // Fill out the checkout form with the provided values
         OnStage.theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(PurchasePageInterface.INP_FIRST_NAME, WebElementStateMatchers.isVisible()),
                 Enter.theValue(firstName).into(PurchasePageInterface.INP_FIRST_NAME),
